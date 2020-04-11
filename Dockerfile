@@ -31,10 +31,7 @@ USER activemq
 
 WORKDIR $ACTIVEMQ_HOME
 
+COPY activemq.xml $ACTIVEMQ_HOME/conf/
 EXPOSE $ACTIVEMQ_TCP $ACTIVEMQ_UI
-VOLUME ["/data/activemq"]
-VOLUME ["/var/log/activemq"]
-VOLUME ["/opt/activemq/conf"]
-
 
 CMD ["/bin/sh", "-c", "bin/activemq console"]
