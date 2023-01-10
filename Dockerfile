@@ -32,6 +32,6 @@ USER activemq
 WORKDIR $ACTIVEMQ_HOME
 
 COPY activemq.xml $ACTIVEMQ_HOME/conf/
-EXPOSE $ACTIVEMQ_TCP $ACTIVEMQ_UI
+EXPOSE $ACTIVEMQ_TCP $ACTIVEMQ_AMQP $ACTIVEMQ_UI
 
 CMD ["/bin/sh", "-c", "bin/activemq console"]
